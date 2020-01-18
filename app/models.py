@@ -8,6 +8,41 @@ from . import login_manager
 def user_loader(user_id):
     return User.query.get(int(user_id))
 
+class Quote:
+    """
+    Blueprint class for quotes consumed from API
+    """
+    def __init__(self, author, quote):
+        self.author = author
+        self.quote = quote
+        
+        
+class Comment(db.Model):
+    __tablename__ = "comments"
+
+    id = db.Column(db.Integer, primary_key = True)
+    comment = db.Column(db.String)
+    comment_at = db.Column(db.DateTime)
+    comment_by = db.Column(db.String)
+    like_count = db.Column(db.Integer, default = 0)
+    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
+
+    def save_comment(self):
+        db.session.add(self)
+        db.session.commit()
+
+    @classmethod
+    def delete_comment(cls, id):
+        gone = Comment.query.filter_by(id = id).first()
+        db.session.delete(gone)
+        db.session.commit()
+
+    @classmethod
+    def get_comments(cls,id):
+        comments = Comment.query.filter_by(post_id = id).all()
+        return comments        
+
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key = True)
@@ -97,31 +132,7 @@ class Post(db.Model):
         return Post.query.order_by(Post.posted_at).all()
 
 
-class Comment(db.Model):
-    __tablename__ = "comments"
 
-    id = db.Column(db.Integer, primary_key = True)
-    comment = db.Column(db.String)
-    comment_at = db.Column(db.DateTime)
-    comment_by = db.Column(db.String)
-    like_count = db.Column(db.Integer, default = 0)
-    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
-    user_id = db.Column(db.Integer, db.ForeignKey("users.id"))
-
-    def save_comment(self):
-        db.session.add(self)
-        db.session.commit()
-
-    @classmethod
-    def delete_comment(cls, id):
-        gone = Comment.query.filter_by(id = id).first()
-        db.session.delete(gone)
-        db.session.commit()
-
-    @classmethod
-    def get_comments(cls,id):
-        comments = Comment.query.filter_by(post_id = id).all()
-        return comments
 
 
 class Subscribers(db.Model):
@@ -137,10 +148,3 @@ class PostLike(db.Model):
     post_id = db.Column(db.Integer, db.ForeignKey("posts.id"))
 
 
-class Quote:
-    """
-    Blueprint class for quotes consumed from API
-    """
-    def __init__(self, author, quote):
-        self.author = author
-        self.quote = quote
