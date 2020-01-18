@@ -10,7 +10,7 @@
 ## User Story in Pictures
 ####  User view
 * User can view the blog posts on the site
-* User sees random quotes on the site
+* User can see random quotes on the site
 * User can view the most recent posts
 * User can subscribe to blog mailing list and receives an email alert when a new post is made.
 * User can comment on blog posts
