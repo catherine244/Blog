@@ -4,9 +4,9 @@ from wtforms import (StringField, TextAreaField,
 from wtforms.validators import Required
 
 class PostForm(FlaskForm):
-    title = StringField("Blog title:", validators=[Required()])
-    post = TextAreaField("Type Away:", validators=[Required()])
-    submit = SubmitField("Post")
+    title = StringField('Title', validators=[DataRequired()])
+    content = TextAreaField('Content', validators=[DataRequired()])
+    submit = SubmitField('Post')
 
 class UpdatePostForm(FlaskForm):
     title = StringField("Blog title", validators=[Required()])
