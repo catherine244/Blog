@@ -1,5 +1,5 @@
 ## Project Name 
-**Avachi Blog**
+**Avechi Blog**
 
 ## Author
 - Catherine Nduku 
