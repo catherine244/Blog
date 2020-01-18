@@ -80,3 +80,7 @@ Here is a run through of how to set up the application:
 * **Step 6** : On your terminal, run the following command, **`chmod a+x start.sh`**
     * You can now launch the application locally by running the command **`./start.sh`** 
     * Open your preferred browser and view the app by opening the link **http://127.0.0.1:5000/**.
+
+
+    ## Known Bugs
+* On creating a new post, a subscribed user wil receive a notification email. However, the page will display an error when redirecting the writer to the post page. This feature has been temporarily disabled due to this -- FIXED
