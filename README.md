@@ -19,3 +19,12 @@
 
 ![alt text](er.png)
 
+####  Writer view
+* sign in to the blog.
+* create a blog from the application.
+* delete comments that I find insulting or degrading
+* update or delete blogs I have created.
+
+![alt text](del.png)
+
+![alt text](edit.png)
