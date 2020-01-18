@@ -45,14 +45,19 @@
 
 
 ## Technologies Used
-* Python 3.7.4
-* Flask 1.1.1
-* PostgreSQL 11.5
+* Python 
+* Flask 
+* PostgreSQL 
 * SQLAlchemy
 * HTML5  
 * CSS3
 * Javascript
-* Bootstrap 4.0.0 beta 
-* Font Awesome 5.8.2
-* jQuery 3.4.1
-* Google Font API
+* Bootstrap 
+* Font Awesome 
+* jQuery 
+
+## Requirements
+* This program requires python3.+ (and pip) installed, a guide on how to install python on various platforms can be found [here](https://www.python.org/)
+* Once python is installed, install the folowing external libraries provided in the requirements.txt file using pip
+* Example: 
+    * **`pip install flask`**
