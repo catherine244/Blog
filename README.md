@@ -93,3 +93,8 @@ Here is a run through of how to set up the application:
 ## live link 
 
 https://Avechi-blog.herokuapp.com/
+
+
+
+## License
+#### [*GNU License*](LICENSE)
