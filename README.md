@@ -15,7 +15,7 @@
 * User can subscribe to blog mailing list and receives an email alert when a new post is made.
 * User can comment on blog posts
 
-![alt text](kk.png)
+
 
 ![alt text](er.png)
 
@@ -27,7 +27,7 @@
 
 ![alt text](del.png)
 
-![alt text](edit.png)
+
 
 
 ## Behavior Driven Development
