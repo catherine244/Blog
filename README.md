@@ -40,4 +40,19 @@
 | User comment on the Blog post plus a nickname | Write your feedback and post it | Your feedback is displayed under the blog post   |
 | Writer delete a blog post       | Deleting the blog post from the database    | The blog post will be deleted and not appear on the page                  |
 | Writer update a blog post       | Updating the blog post in database    | The blog post will be updated                |
-| Writer delete a comment         | Deleting the blog post in database    | The comment will no longer appear under the post    
+| Writer delete a comment         | Deleting the blog post in database    | The comment will no longer appear under the post   
+
+
+
+## Technologies Used
+* Python 3.7.4
+* Flask 1.1.1
+* PostgreSQL 11.5
+* SQLAlchemy
+* HTML5  
+* CSS3
+* Javascript
+* Bootstrap 4.0.0 beta 
+* Font Awesome 5.8.2
+* jQuery 3.4.1
+* Google Font API
